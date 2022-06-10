@@ -40,7 +40,9 @@ with content in JSON form :
 ```
 
 Response : 
+
 In JSON form 
+
 Make sure ```statusCode``` is ```200``` and there's data inside ```data``` under the JSON response.
 
 2. To retrieve specified station timetable / schedule 
@@ -67,8 +69,11 @@ with content in JSON form :
 }
 ```
 Response : 
+
 In JSON form 
+
 Make sure ```statusCode``` is ```200``` 
+
 If there's **NO** data inside ```data``` under the JSON response , which means there are currently no train for this station.
 
 3. To retrieve specified selected Origin - Destination timetable
@@ -100,8 +105,11 @@ with content in JSON form :
 }
 ```
 Response : 
+
 In JSON form 
+
 Make sure ```statusCode``` is ```200``` 
+
 If there's **NO** data inside ```data``` under the JSON response , which means there are currently no train serve from your Origin Station to Destination Station.
 
 
@@ -115,3 +123,15 @@ Any Pull-Requests that make senses and able to improve this project is welcome!
 ## Credits
 1. MyRailTime2.0
 2. KTMB
+
+## Screenshots 
+![image](https://user-images.githubusercontent.com/58818070/173098800-28a9564f-58d4-4118-9f3c-9a5abf442578.png)
+![image](https://user-images.githubusercontent.com/58818070/173098909-8cc72f6e-f8ff-4d79-922f-77722cb71162.png)
+
+![image](https://user-images.githubusercontent.com/58818070/173099187-ae503a19-cf30-45c9-b898-25473105997b.png)
+![image](https://user-images.githubusercontent.com/58818070/173099077-1fbaddf2-c949-4c29-ba10-8fbc6744f860.png)
+
+
+
+
+
