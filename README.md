@@ -113,6 +113,27 @@ Make sure ```statusCode``` is ```200```
 If there's **NO** data inside ```data``` under the JSON response , which means there are currently no train serve from your Origin Station to Destination Station.
 
 
+## Proxied API Documentation
+This project provide proxied MyRailTime2.0's API via PHP and return in JSON form.
+
+1. ```api/stationlist.php``` 
+- Retrieve all Latest KTM's Station Name and Code in JSON form 
+- No Query String required
+
+2. ```api/journey.php```
+- Retrieve Train Information from provided Origin to Destination in JSON form
+- Query String required :
+
+```origincode``` - Origin KTM Station's Code
+
+```destinationcode``` - Destination KTM Station's Code
+
+3. ```api/stationschedule.php```
+- Retrieve specified KTM Station's schedule and timetable in JSON form
+- Query String required :
+
+```stationcode``` - Specified KTM Station's Code
+
 ## Issues
 So far I have not yet encountered any Issue about this project , kindly create a Issue if you found anything that might affect the stability of this project. 
 
