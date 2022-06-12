@@ -147,21 +147,36 @@ echo "No train available for this journey. Please try again later."; exit;} else
   <thead class="thead-light">
   <tr>
     <th>Origin Station Name</th>
+      <th>Via</th>
     <th>Origin Train Number</th>
     <th>Origin Train Depart Time</th>
+    <th>Via connections</th>
     <th>Destination Station</th>
     <th>Destination Train Arrival Time</th>
-    <th>Via</th>
+  
 
   </tr></thead>  <tbody id="myTable">';
+ 
 foreach($jsondata as $value){
+    $connections = $value["connections"];
     echo "<tr>";
  echo "<td>" . $value["originStationName"] . " </td>";
+      echo "<td>" . $value["originStationService"] . " </td>";
   echo "<td>" . $value["originTrainNo"] . " </td>";
  echo "<td>" . $value["originTimeToDepart"] . " </td>";
+ if (empty(count($connections))) { 
+       echo "<td> N/A </td>";
+ } else {
+     echo "<td>";
+     foreach($connections as $value2) {
+          echo "Via : " . $value2["stationName"] . "<br> Train Number : ".$value2["trainNo"] ." <br> Train services : ".$value2["stationService"]."<br>Time to depart : ".$value2["timeToDepart"];
+     } echo "</td>";
+     
+ }
+
   echo "<td>" . $value["destinationStationName"] . " </td>";
     echo "<td>" . $value["destinationTimeToArrival"] . " </td>";
-     echo "<td>" . $value["originStationService"] . " </td>";
+
    echo "</tr>";
 }
 echo "</table>";
