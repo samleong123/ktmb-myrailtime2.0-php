@@ -15,10 +15,6 @@ $data = isset($_REQUEST["TripData"]) ? $_REQUEST["TripData"] : null;
 
 if (empty($stationcode) || empty($token) || empty($token2) || empty($data)) {
 http_response_code(400);
-echo $stationcode;
-echo $token;
-echo $token2;
-echo $data;
 exit;
 }
 
@@ -46,4 +42,5 @@ exit;
 
     $resp = curl_exec($curl);
     curl_close($curl);
+    echo $resp;
 ?>

@@ -1,4 +1,6 @@
 <?php
+ header('Access-Control-Allow-Origin: *');
+ header('Content-Type: application/json');
 $station_code = $_REQUEST["station"];
 
 if (empty($station_code)){
@@ -60,8 +62,7 @@ if (preg_match($re, $str, $matches)){
     $tripdatadecode = json_decode($tripdata,true);
     $tripsnumber = count($tripdatadecode);
     $finaldata = array("Status"=>"Success","TokenForm"=>$token2,"TokenCookie"=>$token,"TripsNumber"=>$tripsnumber,"TripsData"=>urlencode($tripdata),"Station"=>$station_code);
-  header('Access-Control-Allow-Origin: *');
-header('Content-Type: application/json');
+ 
     echo json_encode($finaldata);
 }
     
